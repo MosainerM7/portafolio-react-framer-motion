@@ -1,0 +1,92 @@
+// src/components/Header/Header.scss
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem 2rem;
+    background: linear-gradient(90deg, #3a6073, #16222a);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    transition: background-color 0.3s ease-in-out;
+  
+    .logo {
+      font-size: 1.8rem;
+      color: #fff;
+      font-weight: bold;
+      letter-spacing: 1px;
+    }
+  
+   
+    h1 {
+        color: #fff;  // Color principal del texto
+        font-family: Verdana, Geneva, Tahoma, sans-serif;  // Usando la fuente predeterminada del sistema
+        font-size: 1.5rem;
+        font-weight: 300;
+        text-transform: uppercase;  // Para darle un toque más fuerte
+        letter-spacing: 1.3px;  // Espaciado entre letras
+        text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.1), 0 0 25px rgba(0, 0, 0, 0.3);  // Sombra suave con toques de gris
+    
+        // Efecto hover que cambia el color a gris y aumenta la sombra
+        &:hover {
+          color: #ccc;  // Cambia el color a gris claro en el hover
+          text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.2), 0 0 30px rgba(0, 0, 0, 0.4);  // Aumenta la sombra al pasar el mouse
+        }
+      }
+    
+    nav {
+      display: flex;
+      gap: 1.5rem;
+  
+      a {
+        color: #fff;
+        font-size: 1rem;
+        text-decoration: none;
+        position: relative;
+        padding: 0.5rem;
+        transition: color 0.3s ease-in-out;
+  
+        &:hover {
+          color: #ffa500;
+        }
+  
+        &::after {
+          content: '';
+          position: absolute;
+          bottom: 0;
+          left: 50%;
+          transform: translateX(-50%);
+          width: 0;
+          height: 2px;
+          background-color: #ffa500;
+          transition: width 0.3s ease;
+        }
+  
+        &:hover::after {
+          width: 100%;
+        }
+      }
+    }
+  }
+  
+
+
+  .cv-button {
+    background-color: #ec9209;
+    color: #fff;
+    font-weight: bold;
+    padding: 0.5rem 1re m;
+    border-radius: 5px;
+    border: none;
+    text-decoration: none;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+
+    &:hover {
+      background-color: #ffffff;
+      color: #000000;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    }
+  }
+

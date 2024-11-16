@@ -1,0 +1,44 @@
+#about {
+  background-color: #f0f0f0;
+  padding: 2rem 1rem;
+  text-align: center;
+
+  h2 {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.5rem; /* Tamaño grande y atractivo */
+    font-weight: 700; /* Texto audaz */
+    color: #3a6073; /* Color principal */
+    letter-spacing: 2px; /* Espaciado entre letras */
+    text-transform: uppercase; /* Mayúsculas para un diseño más fuerte */
+    margin-bottom: 1rem;
+    position: relative; /* Necesario para los efectos decorativos */
+
+    /* Líneas decorativas */
+    &::before,
+    &::after {
+      content: '';
+      position: absolute;
+      width: 50px;
+      height: 3px;
+      background-color: #16222a;
+      top: 50%;
+      transform: translateY(-50%);
+    }
+
+    &::before {
+      left: -70px;
+    }
+
+    &::after {
+      right: -70px;
+    }
+  }
+
+  p {
+    font-size: 1.1rem;
+    line-height: 1.6;
+    max-width: 600px;
+    margin: 0 auto;
+    color: #555; /* Color gris oscuro para el texto */
+  }
+}
